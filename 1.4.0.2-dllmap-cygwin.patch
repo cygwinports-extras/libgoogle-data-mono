@@ -1,0 +1,8 @@
+--- origsrc/libgoogle-data-mono-1.4.0.2/misc/Google.GData.Client.dll.config	2007-08-08 18:48:51.000000000 -0500
++++ src/libgoogle-data-mono-1.4.0.2/misc/Google.GData.Client.dll.config	2010-02-21 18:42:37.752910300 -0600
+@@ -1,4 +1,5 @@
+ <configuration>
+     <!-- Map to libz.so.1.2.3 on everything but windows, as we ship it for windows. -->
+     <dllmap os="linux,osx,solaris,freebsd,openbsd,netbsd,aix,hpux" dll="zlib.x86.dll" target="libz.so.1.2.3"/>
++    <dllmap os="cygwin" dll="zlib.x86.dll" target="cygz.dll"/>
+ </configuration>

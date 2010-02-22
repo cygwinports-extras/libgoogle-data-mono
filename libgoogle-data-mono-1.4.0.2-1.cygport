@@ -1,0 +1,22 @@
+inherit mono
+
+DESCRIPTION=".NET library for the Google Data API"
+HOMEPAGE="http://code.google.com/p/google-gdata/"
+SRC_URI="http://google-gdata.googlecode.com/files/${P}.tar.gz"
+
+PATCH_URI="
+	1.4.0.2-dllmap-cygwin.patch
+	1.4.0.2-pkg-config.patch
+"
+
+PKG_NAMES="${PN} mono-Google-GData1.4"
+mono_Google_GData1_4_CONTENTS="usr/"
+
+MAKEOPTS+=" PREFIX=/usr"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	ln -sf misc/Google.GData.Client.dll.config .
+	cygmake
+}

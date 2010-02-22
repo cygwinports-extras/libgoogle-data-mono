@@ -1,0 +1,10 @@
+Already fixed in SVN trunk.
+
+--- origsrc/libgoogle-data-mono-1.4.0.2/misc/gdata-sharp-core.pc.in	2009-02-05 04:15:17.000000000 -0600
++++ src/libgoogle-data-mono-1.4.0.2/misc/gdata-sharp-core.pc.in	2010-01-04 20:23:36.448198100 -0600
+@@ -5,4 +5,4 @@ Name: GData Sharp Core
+ Description: CLI bindings to Google's online services (Core libraries)
+ Version: @VERSION@
+ 
+-Libs: -r:${libdir}/mono/GData-Sharp/Google.GData.Client.dll -r${libdir}/mono/GData-Sharp/Google.GData.Extensions.dll
++Libs: -r:${libdir}/mono/GData-Sharp/Google.GData.Client.dll -r:${libdir}/mono/GData-Sharp/Google.GData.Extensions.dll
